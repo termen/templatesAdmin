@@ -1,0 +1,56 @@
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+	background-color: #42A5F5;
+/* 	background-color: #26C6D6; */
+/* 	background-color: #4CAF50; */
+/* 	background-color: #E64A19; */
+/* 	background-color: #9C27B0; */
+/* 	background-color: #69F0AE; */
+}
+
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus{
+	background-color: #E64A19;
+/* 	background-color: #9C27B0; */
+/* 	background-color: #42A5F5; */
+/* 	background-color: #69F0AE; */
+/* 	background-color: #26C6D6; */
+	color: #FFF;
+}
+
+.nav-sidebar > .menu > a{
+/* 	background-color: #E64A19; */
+/* 	color: #FFF; */
+}
+.nav-sidebar > .menu > a:hover{
+	background-color: #E64A19;
+/* 	background-color: #9C27B0; */
+/* 	background-color: #42A5F5; */
+/* 	background-color: #69F0AE; */
+/* 	background-color: #26C6D6; */
+/* 	background-color: #FFF; */
+	color: #FFF;
+}
+
+.img-thumbnail-profile{
+	max-width: 200px;
+	max-height: 200px;
+}
+
+.img-thumbnail-special{
+	width: 200px; height: auto;
+}
+
+.home-page{
+	/*
+	max-height: 100%;
+	min-height: 100%;
+	*/
+}
+
+.login-section{
+	margin-left: 20%;
+	margin-right: 20%;
+}
