@@ -39,11 +39,8 @@ return array(
                     'default' => array(
                         'type'    => 'Segment',
                         'options' => array(
-<<<<<<< HEAD
-                            'route'    => '/[:controller[/:action]]',
-=======
+
                             'route'    => '/[:action]',
->>>>>>> master
                             'constraints' => array(
                                 'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
                                 'action'     => '[a-zA-Z][a-zA-Z0-9_-]*',
@@ -54,14 +51,10 @@ return array(
                     ),
                 ),
             ),
-<<<<<<< HEAD
         ),
-=======
         	//
         	//
         	//
-    	),
->>>>>>> master
     ),
     'service_manager' => array(
         'abstract_factories' => array(

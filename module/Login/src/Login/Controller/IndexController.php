@@ -11,10 +11,6 @@ namespace Login\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
-<<<<<<< HEAD
-use Login\Form;
-=======
->>>>>>> master
 use Login\Form\loginForm;
 use Login\Form\Filter\loginFilter;
 
