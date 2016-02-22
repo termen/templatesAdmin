@@ -1,0 +1,89 @@
+<?php if(isset($this->messages)) : ?>
+    <ul>
+        <?php foreach ($this->messages as $type => $msg) : ?>
+        <li><span class="<?php echo $type; ?>"><?php echo $msg; ?></span></li>
+        <?php endforeach; ?>
+    </ul>
+
+<?php endif; ?>
+
+<?php
+	$loginForm	= $this->loginForm;
+	$formLabel	= $this->plugin('formLabel');
+	$loginForm->prepare();
+	
+	echo $this->form()->openTag($loginForm);
+?>
+<h1 class="page-header">Inicia Sesión</h1>
+
+<div class="row placeholders login-section">
+
+	<div class="col-xs-12 col-sm-12 col-md-12 placeholder">
+	
+		<div class="blog-post"><!-- -------------- /.blog-post -------------- -->
+		
+			<div class="form-goup">
+				<?php 
+					$title = $loginForm->get('user');
+					echo $formLabel->openTag().$title->getOption('label')." ";
+					echo $this->formInput($title);
+					echo $formLabel->closeTag();
+				?>
+				<span class="common-error-msg ">
+					<?php 
+						echo $this->formElementErrors($loginForm->get('user'));
+					?>
+				</span>
+			</div>
+			
+			<div class="form-goup">
+				<?php 
+					$title = $loginForm->get('pass');
+					echo $formLabel->openTag().$title->getOption('label')." ";
+					echo $this->formInput($title);
+					echo $formLabel->closeTag();
+				?>
+				<span class="common-error-msg ">
+					<?php 
+						echo $this->formElementErrors($loginForm->get('pass'));
+					?>
+				</span>
+			</div>
+			
+			<div class="form-goup">
+				<?php 
+					$title = $loginForm->get('remember');
+					echo $formLabel->openTag().$title->getOption('label')." ";
+					echo $this->formInput($title);
+					echo $formLabel->closeTag();
+				?>
+			</div>
+			
+			<div class="form-goup">
+				<?php 
+					echo $this->formElement($loginForm->get('login'));
+				?>
+				<?php 
+					echo $this->formHidden($loginForm->get('loginCsrf'));
+					echo $this->formElementErrors($loginForm->get('loginCsrf'));
+				?>
+			</div>
+			
+		</div><!-- -------------- /.blog-post -------------- -->
+		
+	</div>
+	
+</div>
+
+<?php 
+	echo $this->form()->closeTag();
+?>
+
+<script type="text/javascript">
+
+	/**
+	 * Variable para llamado a peticiones jquery 
+	 */
+	var $basePath = "<?php echo $this->basePath();?>";
+	
+</script>

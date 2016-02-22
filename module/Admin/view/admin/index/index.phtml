@@ -1,0 +1,90 @@
+<?php
+/**
+ * @author		Aron Chavez Solis
+ * @copyright	Lynx_App 2015
+ * @version		0.1
+ * @category	Unstable
+ */
+
+// 	$adminWiki	= $this->adminWikiform;
+// 	$formLabel		= $this->plugin('formLabel');
+	
+// 	echo $this->form()->openTag($adminWiki);
+?>
+	
+	<!--  
+		--	Vista Encargada de Mostrar las Consultas de Wikis Globales
+		--	
+		--	
+	-->
+
+<h1 class="page-header">Bienvenido</h1>
+	
+<div class="row placeholders login-section">
+
+	<div class="col-xs-12 col-sm-12 col-md-12 placeholder">
+	
+		<div class="col-md-8 col-md-offset-1">
+			<h4>Añadir Contenido</h4>
+			<div class="form-group">
+			<?php 
+// 				$title = $adminWiki->get('wiki-title');
+// 				echo $formLabel->openTag().$title->getOption('label')." ";
+// 				echo $this->formInput($title);
+// 				echo $formLabel->closeTag();
+			?>
+			</div>
+			<div class="form-group">
+			<?php 
+// 				$content = $adminWiki->get('wiki-content');
+// 				echo $formLabel->openTag().$content->getOption('label')." ";
+// 				echo $this->formTextarea($content);
+// 				echo $formLabel->closeTag();
+			?>
+			</div>
+			<div class="form-group">
+			<?php 
+// 				$class = $adminWiki->get('id_asignature');
+// 				echo $formLabel->openTag().$class->getOption('label')." ";
+// 				echo $this->formSelect($class);
+// 				echo $formLabel->closeTag();
+			?>
+			</div>
+				<div class="form-group">
+				<?php 
+	// 				$content = $adminWiki->get('post-content');
+	// 				echo $formLabel->openTag().$content->getOption('label')." ";
+	// 				echo $this->formTextarea($content);
+	// 				echo $formLabel->closeTag();
+				?>
+				</div>
+			<div class="col-md-3">
+				<div class="form-group">
+				<?php 
+// 					echo $this->formElement($adminWiki->get('save-wiki'));
+				?>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
+				<?php 
+// 					echo $this->formElement($adminWiki->get('cancel'));
+				?>
+				</div>
+			</div>
+		</div>
+	
+	<?php 
+// 		echo $this->form()->closeTag();
+	?>
+	
+	</div>
+
+</div>
+		
+		<script type="text/javascript">
+			/**
+			 * Variable para llamado a peticiones jquery 
+		 	 */
+			var $basePath = "<?php echo $this->basePath();?>";
+		</script>

@@ -6,4 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'ZF\\OAuth2\\' => array($vendorDir . '/zfcampus/zf-oauth2/src'),
+    'ZF\\ContentNegotiation\\' => array($vendorDir . '/zfcampus/zf-content-negotiation/src'),
+    'ZF\\ApiProblem\\' => array($vendorDir . '/zfcampus/zf-api-problem/src'),
 );

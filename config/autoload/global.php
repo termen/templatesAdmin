@@ -12,5 +12,22 @@
  */
 
 return array(
-    // ...
+		'db' => array(
+				'driver'         => 'Pdo',
+				'dsn'            => 'mysql:dbname=yanic; host=localhost',
+				'driver_options' => array(
+						PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
+				),
+		),
+		'service_manager' 	=> array(
+				'factories' => array(
+						'Zend\Db\Adapter\Adapter' => 'Zend\Db\Adapter\AdapterServiceFactory',
+				),
+		),
+		'Zend\Log\Logger' => function($sm){
+		$logger = new Zend\Log\Logger;
+		$writer = new Zend\Log\Writer\Stream('./data/log/'.date('Y-m-d').'-error.log');
+		$logger->addWriter($writer);
+		return $logger;
+		},
 );
