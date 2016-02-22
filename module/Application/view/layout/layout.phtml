@@ -25,11 +25,17 @@
 // 		->prependFile($this->basePath('js/social_timeline/jquery.magnific-popup.min.js'))
 // 		->prependFile($this->basePath('js/social_timeline/jquery.dpSocialTimeline.js'))
 // 		->prependFile($this->basePath('js/social_timeline/jquery.isotope.min.js'))
+<<<<<<< HEAD
+		->prependFile($this->basePath('js/bootstrap.min.js'))
+		->prependFile($this->basePath('js/jquery.min.js'))
+		->prependFile($this->basePath('js/jquery/jquery-1.7.1.min.js'))
+=======
 		->prependFile($this->basePath('js/home_module/actions.js'))
 		->prependFile($this->basePath('js/home_module/requests/home.js'))
 		->prependFile($this->basePath('js/bootstrap.min.js'))
 		->prependFile($this->basePath('js/jquery.min.js'))
 // 		->prependFile($this->basePath('js/jquery/jquery-1.7.1.min.js'))
+>>>>>>> master
 		->prependFile($this->basePath('js/respond.min.js'), 'text/javascript', array('conditional' => 'lt IE 9',))
 		->prependFile($this->basePath('js/html5shiv.js'), 'text/javascript', array('conditional' => 'lt IE 9',))
 	; ?>
@@ -64,10 +70,23 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-3 col-md-2 sidebar">
+<<<<<<< HEAD
+				<ul class="nav nav-sidebar">
+					<li class="active"><a href="<?php echo $this->basePath(); ?>/">INICIO</a></li>
+					<li class="menu"><a href="#">SHOWS INFANTILES</a></li>
+					<li class="menu"><a href="#">IMITADORES</a></li>
+					<li class="menu"><a href="#">PUBLICIDAD</a></li>
+					<li class="menu"><a href="#">EVENTOS ESPECIALES</a></li>
+					<li class="menu"><a href="#">GALERIA</a></li>
+				</ul>
+				<ul class="nav nav-sidebar">
+					<li class="menu"><a href="<?php echo $this->basePath(); ?>/login">INICIA SESION</a></li>
+=======
 				<ul class="nav nav-sidebar" id="home_list">
 				</ul>
 				<ul class="nav nav-sidebar" id="login_list">
 					
+>>>>>>> master
 				</ul>
 			</div>
 			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">

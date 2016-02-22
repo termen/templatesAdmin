@@ -12,6 +12,14 @@ namespace Application\Controller;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
+<<<<<<< HEAD
+class IndexController extends AbstractActionController
+{
+    public function indexAction()
+    {
+        return new ViewModel();
+    }
+=======
 use Application\Service\MenuService;
 
 class IndexController extends AbstractActionController
@@ -60,4 +68,5 @@ class IndexController extends AbstractActionController
     	exit;
 	}
 	
+>>>>>>> master
 }
