@@ -1,6 +1,6 @@
 /**
  * @author		Aron Chavez Solis
- * @copyright	Lynx_App 2015
+ * @copyright	YanicShow 2015
  * @version		0.1
  * @category	Unstable
  */
@@ -16,14 +16,12 @@ function getAdminMenu(){
 		dataType: 'json',
 		success: function(response){
 			
-			console.log('success');
-			
 			var $home_list = $('#home_list');
 			var $admin_list = $('#login_list');
 			
 			$.each(response.data, function(index, obj){
 				
-				if(obj.menu_type == "category"){
+				if(obj.id_type == 2){
 					
 					$home_list.append(
 								'<li class="menu" id="' + obj.id_menu_father + '" >'
@@ -31,10 +29,10 @@ function getAdminMenu(){
 										+ obj.menu_name 
 									+ '</a>'
 								+ '</li>'
-									+'<ul id="' + obj.id_menu + '" class="collapse nav nav-sidebar"></ul>');
+								+'<ul id="' + obj.id_menu + '" class="collapse nav nav-sidebar"></ul>');
 					
 				}
-				else if(obj.menu_type == "login"){
+				else if(obj.id_type == 4){
 					
 					$admin_list.append(
 									'<li class="menu" id="' + obj.id_menu_father + '" >'
@@ -45,7 +43,7 @@ function getAdminMenu(){
 					
 				}
 				else if(obj.submenu){
-//					
+					
 					$.each(obj.submenu, function(index, obj){
 						
 						console.log(obj.ruta );
@@ -61,7 +59,7 @@ function getAdminMenu(){
 				
 			});
 			
-			
+			console.log('success');
 //			getAdminSubMenu();
 			
 		},

@@ -2,7 +2,7 @@
 	
 /**
  * @author		Aron Chavez Solis
- * @copyright	Lynx_App 2015
+ * @copyright	Admin_Page 2015
  * @version		0.1
  * @category	Unstable
  * @package		Admin
@@ -28,84 +28,11 @@
 			
 			$this ->setName('addTheme')
 			->setAttributes(array(
-					'id'		=> 'addTheme',
-					'name'		=> 'addTheme',
+					'id'		=> 'formHome',
+					'name'		=> 'formHome',
 					'method'	=> 'Post',
-					'action'	=> 'addWiki'
+// 					'action'	=> 'addWiki'
 			));
-			
-			$this->add(array(
-					'name' => 'wiki-title',
-					'options' => array(
-							'label'		=> 'Título:',
-					),
-					'attributes' => array(
-							'type'		=> 'text',
-							'class'		=> 'form-control',
-							'id'		=> 'wiki-title',
-							'required'	=> 'required'
-					)
-			));
-			
-			$this->add(array(
-					'name' => 'id_asignature',
-					'type' => 'Zend\Form\Element\Select',
-					'options' => array(
-							'label'			=> 'Clase:',
-							'value_options' => array(
-		      						'0'		=> 'Classes',
-							),
-					),
-					'attributes' => array(
-							'id'			=> 'id_asignature',
-							'class'			=> 'form-control id_asignature',
-							'required'		=> 'required',
-							'placeholder'	=> 'Agrega tu Informacón ...'
-					),
-			));
-			
-
-
-			$this->add(array(
-					'name' => 'wiki-content',
-					'options' => array(
-							'label'		=> 'Contenido:',
-					),
-					'attributes' => array(
-							'type'		=> 'textarea',
-							'class'		=> 'form-control content',
-							'id'		=> 'wiki-content',
-							'required'	=> 'required'
-					)
-			));
-
-			$this->add(array(
-					'name' => 'save-wiki',
-					'attributes' => array(
-							'id'		=> 'rte-wiki',
-							'type'		=> 'button',
-							'class' 	=> 'btn btn-lg btn-primary rte-wiki',
-							'value'		=> 'Guardar',
-							'title'		=> 'Guardar',
-							'onclick'	=> 'javascript: saveWiki()'
-					),
-			));
-			
-			$this->add(array(
-					'name' => 'cancel',
-					'attributes' => array(
-							'id'		=> 'cancel',
-							'type'		=> 'button',
-							'class' 	=> 'btn btn-lg btn-danger',
-							'value'		=> 'Cancelar',
-							'title'		=> 'Cancelar',
-							'onclick'	=> 'javascript: clean()'
-					),
-			));
-			
-			/*
-			 * 
-			 */
 			
 			$this->add(array(
 					'name' => 'post-title',
@@ -121,6 +48,38 @@
 			));
 			
 			$this->add(array(
+					'name' => 'id_asignature',
+					'type' => 'Zend\Form\Element\Select',
+					'options' => array(
+							'label'			=> 'Clase:',
+							'value_options' => array(
+		      						'0'		=> 'Classes',
+							),
+					),
+					'attributes' => array(
+							'id'			=> 'id_asignature',
+							'class'			=> 'form-control',
+							'required'		=> 'required',
+							'placeholder'	=> 'Agrega tu Informacón ...'
+					),
+			));
+			
+			$this->add(array(
+					'name'	=> 'select_image',
+					'type'	=> 'Zend\Form\Element\File',
+					'options'	=>	array(
+							'label'	=>	'Imagen:'
+					),
+					'attributes'	=>	array(
+							'id'			=> 'select_image',
+							'class'			=> 'form-control',
+							'required'		=> 'required',
+							'placeholder'	=> 'Selecciona una imagen ...'
+					),
+			));
+
+
+			$this->add(array(
 					'name' => 'post-content',
 					'options' => array(
 							'label'		=> 'Contenido:',
@@ -132,19 +91,31 @@
 							'required'	=> 'required'
 					)
 			));
-			
+
 			$this->add(array(
-					'name' => 'save-post',
+					'name' => 'save-home',
 					'attributes' => array(
-							'id'		=> 'rte-wiki',
+							'id'		=> 'save',
 							'type'		=> 'button',
 							'class' 	=> 'btn btn-lg btn-primary rte-wiki',
 							'value'		=> 'Guardar',
 							'title'		=> 'Guardar',
-							'onclick'	=> 'javascript: savePost()'
+							'onclick'	=> 'javascript: saveHome()'
 					),
 			));
-
+			
+			$this->add(array(
+					'name' => 'cancel',
+					'attributes' => array(
+							'id'		=> 'cancel',
+							'type'		=> 'button',
+							'class' 	=> 'btn btn-lg btn-danger',
+							'value'		=> 'Cancelar',
+							'title'		=> 'Cancelar',
+							'onclick'	=> 'javascript: clean()'
+					),
+			));
+			
 		}
 
 	}

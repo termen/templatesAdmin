@@ -1,14 +1,14 @@
 <?php
 /**
  * @author		Aron Chavez Solis
- * @copyright	Lynx_App 2015
+ * @copyright	YanicShow 2015
  * @version		0.1
  * @category	Unstable
  */
 
 namespace Application\Service;
 
-use Application\Model\MenuModel;
+use Application\Model\HomeModel;
 use Zend\Debug\Debug;
 
 class MenuService{
@@ -17,23 +17,28 @@ class MenuService{
 	
 	/**
 	 * 
-	 * @return \Application\Model\MenuModel
+	 * @return \Application\Model\HomeModel
 	 */
-	public function getMenuModel(){
-		return $this->menuModel = new MenuModel();
+	public function getHomeModel(){
+		return $this->menuModel = new HomeModel();
 	}
 	
 	public function fetchMenu()
 	{
 		
-		$menu = $this->getMenuModel()->fetchMenu();
-// 		$asignatures = $this->getAdminModel()->fetchAsignatures();
-
-// 		print_r($matricule);
-// 		print_r($asignatures);
-// 		exit();
+		$menu = $this->getHomeModel()->fetchMenu();
 		
 		return $menu;
+	}
+	
+	public function fetchContent()
+	{
+		
+		$content = $this->getHomeModel()->fetchContent();
+		
+// 		Debug::dump($content);
+		
+		return $content;
 	}
 	
 	/**
@@ -53,7 +58,7 @@ class MenuService{
 			);
 				
 				
-			$insertMenu = $this->getMenuModel()->editMenu($dataMenu);
+			$insertMenu = $this->getHomeModel()->editMenu($dataMenu);
 			
 		}else{
 			
@@ -63,7 +68,7 @@ class MenuService{
 			);
 			
 			
-			$insertMenu = $this->getMenuModel()->addMenu($dataMenu);
+			$insertMenu = $this->getHomeModel()->addMenu($dataMenu);
 			
 		}
 		
@@ -83,7 +88,7 @@ class MenuService{
 		);
 	
 	
-			$deleteWikiId	= $this->getMenuModel()->deleteMenuById($dataIdPost);
+			$deleteWikiId	= $this->getHomeModel()->deleteMenuById($dataIdPost);
 			
 		return $deleteWikiId;
 	}
