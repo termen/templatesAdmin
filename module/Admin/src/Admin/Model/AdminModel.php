@@ -1,7 +1,7 @@
 <?php
 /**
  * @author		Aron Chavez Solis
- * @copyright	Lynx_App 2015
+ * @copyright	YanicShow 2015
  * @version		0.1
  * @category	Unstable
  */
@@ -54,7 +54,7 @@ class AdminModel extends TableGateway{
 		$sql	= new Sql($this->dbAdapter);
 		$select	= $sql->select()
 		->from(		$this->table)
-		->where(	array(	'menu_type'		=>	'submenu'
+		->where(	array(	'id_type'		=>	'3'
 		));
 	
 		$selectString	= $sql->getSqlStringForSqlObject($select);

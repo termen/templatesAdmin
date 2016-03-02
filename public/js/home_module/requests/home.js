@@ -1,10 +1,10 @@
 /**
  * @author		Aron Chavez Solis
- * @copyright	Lynx_App 2015
+ * @copyright	YanicShow 2015
  * @version		0.1
  * @category	Unstable
  */
-
+$.noConflict();
 /*
  * 
  */
@@ -16,7 +16,6 @@ function getHomeMenu(){
 		dataType: 'json',
 		success: function(response){
 			
-			console.log('success');
 			var $home_list = $('#home_list');
 			var $login_list = $('#login_list');
 			
@@ -46,43 +45,48 @@ function getHomeMenu(){
 	
 }
 
-/*
- * 
- */
-
-
-
-function checkMenuOptions(){
+function getHomeContect(){
 	
 	$.ajax({
-		url 		: $basePath + "/admin/fetchMenu",
-		type		: "POST",
-		dataType	: 'json',
-		success		: function(response){
+		url  : $basePath + "/application/getcontenthome",
+		type : "POST",
+		dataType: 'json',
+		success: function(response){
 			
-			var $content = $('#wiki-contents');
-			$content.html('<th><h4 class="">Nombre</h4></th>'
-						 +'<th><h4 class="">Acción</h4></th>');
+			
+			var $formatDate;
 			
 			$.each(response.data, function(index, obj){
 				
-				$content.append('<tr><td>' + obj.wiki_name + '</td>'
-						+'<td><a class="btn btn-success activity-btn"' 
-						+'onclick="javascript: editWiki('+obj.id_wiki+')">Editar</a></td>'
-						+'<td><a class="btn btn-danger activity-btn"'
-						+ 'onclick="javascript: deleteWiki('+obj.id_asig_wiki+')">Eliminar</a></td>'
-						+'</tr>');
+				if(index == 0){
+
+					var date = obj.content_date;
+					$formatDate = formatDate(new Date(date));
+					
+					$('#post-datde').append($formatDate + ' por <a href="#">Abner Showman</a></p>');
+				}
+				
+				if(obj.type == "text"){
+					$('#home_title_'+index).append( obj.section_title );
+					$('#home_text_'+index).append( obj.section_content );
+				}
+				else if(obj.type == "image"){
+					$('#home_image_'+index).append( obj.section_image );
+				}
+				
+				
 			});
+			
 		},
-		error	: function(){
-//			alert("Algo salio mal, intentalo de nuevo");
-			$content.append('<tr><td>'
-					+'<h2 class="">Ups! Algo salio mal.</h2>'
-					+'<h3 class="">Intentalo de nuevo.</h3>'
-					+'</td></tr>');
+		error : function(){ 
+//			alert("Ocurrio un error, intentalo de nuevo");
+			console.log("Ocurrio un error, intentalo de nuevo");
 		}
 	});
+	
 }
+
+
 
 /*
  * 
@@ -170,3 +174,5 @@ function deleteMenu(idwikiasig){
 		}
 	});
 }
+
+

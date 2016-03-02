@@ -1,7 +1,7 @@
 <?php
 /**
  * @author		Aron Chavez Solis
- * @copyright	Lynx_App 2015
+ * @copyright	YanicShow 2015
  * @version		0.1
  * @category	Unstable
  */
@@ -13,7 +13,7 @@ use Zend\Db\TableGateway\Feature;
 use Zend\Db\Adapter\Adapter;
 use Zend\Db\Sql\Sql;
 
-class MenuModel extends TableGateway{
+class HomeModel extends TableGateway{
 	
 	private $dbAdapter;
 	
@@ -37,6 +37,33 @@ class MenuModel extends TableGateway{
 		$select	= $sql->select()
 						->from(		$this->table)
 						->where(	array(	'id_menu_father'	=>	1));
+				
+		$selectString	= $sql->getSqlStringForSqlObject($select);
+		$execute		= $this->dbAdapter->query($selectString, Adapter::QUERY_MODE_EXECUTE);
+		$result			= $execute->toArray();
+		
+// 		print_r($result);
+// 		exit();
+		
+		return $result;
+	}
+	
+	public function fetchContent(){
+		$sql	= new Sql($this->dbAdapter);
+		$select	= $sql->select()
+						->from(		array('section'				=>	'section'))
+						//colums for first chain table
+						->columns(	array(	
+											'id_section'		=>	'id_section',
+											'section_title'		=>	'section_title',
+											'section_content'	=>	'section_content',
+											'content_date'		=>	'content_date',
+									)
+								)
+						->join(		array( 'tp'			=> 'type'	), 'tp.id_type = section.id_type',
+								//array por join table values to get
+									array( 'type'	=> 'type')
+								);
 				
 		$selectString	= $sql->getSqlStringForSqlObject($select);
 		$execute		= $this->dbAdapter->query($selectString, Adapter::QUERY_MODE_EXECUTE);

@@ -1,7 +1,7 @@
 <?php
 /**
  * @author		Aron Chavez Solis
- * @copyright	Lynx_App 2015
+ * @copyright	YanicShow 2015
  * @version		0.1
  * @category	Unstable
  */

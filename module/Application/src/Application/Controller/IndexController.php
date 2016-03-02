@@ -35,18 +35,6 @@ class IndexController extends AbstractActionController
     	
         return new ViewModel();
     }
-	
-    public function addAction()
-    {
-    	
-        return new ViewModel();
-    }
-	
-    public function deleteAction()
-    {
-    	
-        return new ViewModel();
-    }
     
 	public function getMenuhomeAction(){
 		
@@ -56,6 +44,19 @@ class IndexController extends AbstractActionController
     							->setContent(\Zend\Json\Json::encode(
     									array(	"response"	=> "ok", 
     											"data"		=> $menu )));
+
+    	return $response;
+    	exit;
+	}
+    
+	public function getContenthomeAction(){
+		
+		$content		= $this->getMenuserviceAction()->fetchContent();
+		
+    	$response	=  $this->getResponse()
+    							->setContent(\Zend\Json\Json::encode(
+    									array(	"response"	=> "ok", 
+    											"data"		=> $content )));
 
     	return $response;
     	exit;
