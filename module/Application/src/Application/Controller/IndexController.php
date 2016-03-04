@@ -33,7 +33,14 @@ class IndexController extends AbstractActionController
     public function indexAction()
     {
     	
-        return new ViewModel();
+    	$view = new ViewModel();
+    	
+    	$view->setTemplate('layout/layout2.phtml');
+    	
+    	return $view;
+    	
+//         return new ViewModel();
+
     }
     
 	public function getMenuhomeAction(){

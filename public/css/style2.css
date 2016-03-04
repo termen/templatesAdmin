@@ -1,0 +1,134 @@
+.fondo,#fondo,#inicio,#contacto{
+	/*background: #ccc;*/
+}
+.fondo2,#fondo2{
+
+}
+#sidebar,#menu{
+	border: white 2px solid;
+}
+.fondo3,#fondo3{
+	/*background: #cdc;
+	background: rgba(126, 160, 255, 0.3);*/
+}
+
+
+a.color,a#color{
+	text-decoration:underline;
+	color:#000000;
+} 
+
+a.color:hover ,a#color:hover{
+	text-decoration:none;
+	color:#000000;
+} 
+
+/*#lista{
+	background-color: #f14923;
+}
+*/
+
+body{ 
+	padding-top: 50px;
+	background: #54c393;
+/* 	background: #FFA726; */
+	padding-bottom: 50px;
+}
+
+/*
+#empresa,#tramites,#estudios,
+#proteccion,#seguridad,#asesoria,#contacto{
+	display: none;
+}
+
+#home,#profile,#messages{
+	display: none;
+}
+
+
+*/
+
+
+/*
+ * Estilos de ventana desplegable
+ */
+
+.right{
+	
+	position: fixed;
+	height: ;
+	top: 5em;
+	right: -310px;
+}
+
+/*
+*/
+.h-align{
+	float: left;
+}
+
+
+/*
+*/
+.p{
+	width: 40px;
+}
+
+/*
+*/
+.p1{
+	border-radius: 20px 0px 0px 0px;
+	-moz-border-radius: 20px 0px 0px 0px;
+	-webkit-border-radius: 20px 0px 0px 0px;
+	background-color: #30487b;;
+	width: 45px;
+	height: 40px;
+}
+
+/*
+*/
+.p2{
+	background-color: #208132;
+	width: 45px;
+	height: 40px;
+}
+
+/*
+*/
+.p3{
+	background-color: #1087DD;
+	width: 45px;
+	height: 40px;
+}
+
+/*
+*/
+.p4{
+	border-radius: 0px 0px 0px 20px;
+	-moz-border-radius: 0px 0px 0px 20px;
+	-webkit-border-radius: 0px 0px 0px 20px;
+	background-color: #dd4b39;;
+	width: 43px;
+	height: 40px;
+}
+
+/*
+*/
+.contents{
+	width: 310px;
+	height: 300px;
+	background: #54c393;
+
+	border-radius: 0px 0px 0px 20px;
+	-moz-border-radius: 0px 0px 0px 20px;
+	-webkit-border-radius: 0px 0px 0px 20px;
+	border: white 2px solid;
+
+}
+/*
+*/
+.pos{
+	width: 48px;
+	height: 48px;
+	left: 0px;
+}

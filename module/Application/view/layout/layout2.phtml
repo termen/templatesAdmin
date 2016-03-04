@@ -1,0 +1,440 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<?php echo $this->headTitle('Yanic Show '. $this->translate('Máxima Diversión'))->setSeparator(' - ')->setAutoEscape(false) ?>
+	
+	<?php echo $this->headMeta()
+		->appendName('viewport', 'width=device-width, initial-scale=1.0')
+		->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+	?>
+	
+	<!-- Le styles -->
+	<?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.yanic.icon', 'href' => $this->basePath() . '/img/yanic.ico'))
+		->prependStylesheet($this->basePath('css/style2.css'))
+		->prependStylesheet($this->basePath('css/bootstrap-theme.min.css'))
+		->prependStylesheet($this->basePath('css/dashboard.css'))
+// 		->prependStylesheet($this->basePath('css/social_timeline/dpSocialTimeline.css'))
+// 		->prependStylesheet($this->basePath('css/social_timeline/magnific-popup.css'))
+// 		->prependStylesheet($this->basePath('css/social_timeline/styles.css'))
+		->prependStylesheet($this->basePath('css/bootstrap.min.css')) ?>
+	
+	<!-- Scripts -->
+	<?php echo $this->headScript()
+// 		->prependFile($this->basePath('js/social_timeline/jquery.magnific-popup.min.js'))
+// 		->prependFile($this->basePath('js/social_timeline/jquery.dpSocialTimeline.js'))
+// 		->prependFile($this->basePath('js/social_timeline/jquery.isotope.min.js'))
+
+		->prependFile($this->basePath('js/home_module/actions.js'))
+		->prependFile($this->basePath('js/home_module/requests/home.js'))
+		->prependFile($this->basePath('js/bootstrap.min.js'))
+		->prependFile($this->basePath('js/jquery.min.js'))
+		->prependFile($this->basePath('js/jquery-2.1.0.min.js'))
+// 		->prependFile($this->basePath('js/jquery/jquery-1.7.1.min.js'))
+		->prependFile($this->basePath('js/respond.min.js'), 'text/javascript', array('conditional' => 'lt IE 9',))
+		->prependFile($this->basePath('js/html5shiv.js'), 'text/javascript', array('conditional' => 'lt IE 9',))
+	; ?>
+
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">YANICSHOW </a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="active" ><a href="index.html">Inicio</a></li>
+				</ul>
+				<form class="navbar-form navbar-left" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Búsqueda">
+					</div>
+					<button type="submit" class="btn btn-default">Buscar</button>
+				</form>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Opciones<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+
+							<li>
+								<a class="btn btn-primary" data-toggle="modal" data-target="#myModal">Inicia Sesión</a>
+							</li>
+
+							<li class="divider"></li>
+							<li><a href="#">Términos y condiciones</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+	
+	<div class="container" id="main">
+		<div class="row">
+			<?php echo $this->content; ?>
+			<div class="col-md-2"  id="sidebar">
+				<ul class="nav nav-tabs nav-stacked" id=" ">
+					<li class="active"><a href="#inicio" data-toggle="tab" id="color">Inicio</a></li>
+					<li><a href="#empresa" data-toggle="tab" id="color">Empresa</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" id="color">Servicios<b class="caret"></b></a>
+						<ul class="dropdown-menu" id="lista">
+					<li><a href="#tramites" data-toggle="tab" id="color">Trámites-Gestión</a></li>
+					<li><a href="#estudios" data-toggle="tab" id="color">Estudios y Análisis de Laboratorio</a></li>
+					<li><a href="#proteccion" data-toggle="tab" id="color">Proteccion Civil</a></li>
+					<li><a href="#seguridad" data-toggle="tab" id="color">Seguridad e Higiene</a></li>
+					<li><a href="#asesoria" data-toggle="tab" id="color">Asesoria Ambiental</a></li>
+					<li class="divider"></li>
+					<li><a class="disabled">Otros servicios</a></li>
+					<li><a href="#" id="color">OTROS</a></li>
+						</ul>
+					</li>
+				 	<li><a href="#contacto" data-toggle="tab" id="color">Contacto</a></li>
+					<h4>Visitanos en</h4>
+					<li><a class="btn btn-block btn-social btn-lg btn-twitter" ><i class="fa fa-twitter"></i>Twitter</a></li>
+					<li><a class="btn btn-block btn-social btn-lg btn-facebook" href="https://www.facebook.com/PPCConsultores?fref=ts"><i class="fa fa-facebook"></i>Facebook</a></li>
+					<li><a class="btn btn-block btn-social btn-lg btn-google-plus"><i class="fa fa-google-plus"></i>Google +</a></li>
+					<h4>Contáctanos</h4>
+					<li>
+						<h5>Teléfonos:</h5><h5>36893331 ó 36893340</h5>
+						<h5>Correo:</h5><h5>YANICSHOW @hotmail.com</h5>	
+					</li>
+				</ul>
+			</div>
+			
+			<div class="col-md-10 tab-content">
+
+				<!-- inicio -->
+				<div class="tab-pane fade in active" id="inicio">
+					<h3 align="center">YANICSHOW </h3>
+					<div class="col-md-12" align="center"><img src="img/Boubinsky_potok_in_nature_reserve_Certova_stran_in_2011_(3).JPG" width="100%" alt="responsive image" class="responsive-img"></div>
+
+					<div class="row">
+						<div class="col-md-6" id="fondo3">
+							<br/><br/><br/>
+							<h3 align="center"><a class="list-group-item list-group-item-info">CONOCENOS</a></h3>
+							<br/><br/>
+							<a class="list-group-item list-group-item-info">TE OFRECEMOS DESDE UN 5 HASTA UN 10% DE DESCUENTO EN LA CONTRATACIÓN DE CUALQUIERA DE NUSTROS SERVICIOS</a>
+						</div>
+						<div class="col-md-6" id="fondo3">
+							<br/><br/><br/>
+							<h3><a class="list-group-item list-group-item-info">PROMOCIONES</a></h3>
+							<br/><br/>
+							<a class="list-group-item list-group-item-info">Carpeta personalizada para conservar documentos probatorios hacia las instancias gubernamentales.</a>
+							<a class="list-group-item list-group-item-info">Plática y/o capacitación en materia de Residuos Sólidos No Peligrosos.</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- empresa -->
+				<div class="tab-pane fade" id="empresa">
+					<h3 align="center">YANICSHOW </h3>
+					<div class="col-md-3"><img src="" alt="responsive image" class="responsive-img"></div>
+
+					<div class="col-md-7">
+						<p align="justify"><br/>Corporativo Nacional de Servicios e Innovación en Ingeniería Ambiental CONASÍIA, S.A. de C.V., esta constituida  formalmente como una  empresa mexicana, en respuesta a la necesidad que requieren los particulares como una alternativa a la solución del problema de la contaminación.</p>
+					</div>
+					
+					<div class="row">
+						<div class="col-md-12"  id="fondo3">
+							<p align="justify"><br/>CONASÍIA, tiene como objetivo ofrecer servicios y asesoramiento profesional, de acuerdo a las normas y reglamentos en el ramo Ambiental, Protección Civil y Seguridad e Higiene..<br/><br/>
+			 
+							Desde la creación de nuesra empresa nos hemos esforzado por dar un trato personalizado con seguimiento continuo a nuestros clientes con el objetivo de crear un ambiente de confianza y profesionalismo para brindar la mejor solución a la problemática ambiental.</p><br/><br/><br/>
+						</div>
+					</div>
+					
+					<div class="col-md-5">
+						<img src="img/vision-puzzle.jpg" alt="responsive image" width="100%" class="responsive-img">
+						<br/><br/>
+						<h3 align="center">MISIÓN</h3><br/>
+						<p align="justify">
+						Ofrecer servicios de asesoría, consultoría, gestión y  desarrollo e implementación de proyectos ambientales  a la industria y comercio  garantizando el cumplimiento hacia  las instancias gubernamentales mediante un grupo formado por profesionistas en diversas disciplinas  aplicando nuevas tecnologías e innovación  en productos y servicios que atribuyan a mejorar la protección ambiental y promueva el desempeño en la salud y seguridad industrial  a precios accesibles.</p>
+					</div>
+					<div class="col-md-5">
+						<img src="img/mision.jpg" alt="responsive image" width="100%" class="responsive-img">
+						<h3 align="center">VISIÓN</h3><br/>
+						<p align="justify">
+						Ser una empresa líder en el mercado en ofrecer servicios de forma integral, para satisfacer las necesidades de nuestros 
+						clientes.</p>
+					</div>
+				</div>
+				
+				<!-- tramites -->
+				<div class="tab-pane fade" id="tramites">
+
+					<h3 align="center">Servicios</h3>
+
+					<h3 align="center">Trámites y Gestión</h3>
+						<br/>
+						<br/>
+						<br/>
+					<img src="img/tramites-legales.jpg" alt="responsive image" width="100%" class="responsive-img">
+						<br/>
+						<br/>
+						<br/>
+					<div class="col-md-5">
+						<h4>¿Te encuentras en el Estado de México?</h4>
+						<br/>
+						<br/>
+						<ul>
+							<a class="list-group-item list-group-item-info">Licencia de funcionamiento o uso de suelo municipal.</a>
+							<a class="list-group-item list-group-item-info">Trámite para el alta y revalidación del número de descarga de agua residual.</a>
+							<a class="list-group-item list-group-item-info">Trámite para el alta y revalidación del número de registro de residuos no peligrosos.</a>
+							<a class="list-group-item list-group-item-info">Trámite de alta y renovación de licencia de funcionamiento de emisiones a la atmósfera.</a>
+							<a class="list-group-item list-group-item-info">Alta y renovación de cédula de operación integral (COI).</a>
+							<a class="list-group-item list-group-item-info">Tramite de alta como empresa generadora de residuos peligrosos ante SEMARNAT.</a>
+							<a class="list-group-item list-group-item-info">Alta y renovación de cédula de operación anual (COA).</a>
+							<a class="list-group-item list-group-item-info">Visto bueno o no inconveniente de ecología.</a>
+							<a class="list-group-item list-group-item-info">Seguimiento y liberación de condicionantes de Impacto Ambiental.</a>
+							<a class="list-group-item list-group-item-info">Elaboración e implementación de bitácoras para el control de residuos de manejo especial, control de residuos</a>
+							<a class="list-group-item list-group-item-info">peligrosos, mantenimiento de equipos (planta de emergencia, calderas).</a>
+						</ul>
+						<br/>
+						<br/>
+						<br/>
+						<br/>
+					</div>
+					<div class="col-md-5">
+						<h4>¿Te en cuentas en el Distrito Federal?</h4>
+						<br/>
+						<br/>
+						<ul>
+							<a class="list-group-item list-group-item-info">Trámite para obtener la Licencia Ambiental Única LAU DF.</a>
+							<a class="list-group-item list-group-item-info">Plan de manejo de residuos sólidos, en cumplimiento al anexo C, de la LAU.</a>
+							<a class="list-group-item list-group-item-info">Tramite de alta como empresa generadora de residuos peligrosos ante SEMARNAT.</a>
+							<a class="list-group-item list-group-item-info">Alta y renovación de cédula de operación anual (COA).</a>
+							<a class="list-group-item list-group-item-info">Elaboración e implementación de bitácoras para el control de residuos de manejo especial, control de residuos peligrosos, mantenimiento de equipos (planta de emergencia, calderas).</a>
+						</ul>
+						<br/>
+						<br/>
+						<br/>
+						<br/>
+					</div>
+				</div>
+
+				<!-- estudios -->
+				<div class="tab-pane fade" id="estudios">
+					<h3 align="center">ESTUDIOS Y ANÁLISIS DE LABORATORIO</h3>
+						<br/>
+						<br/>
+						<br/>
+
+					<div class="row">
+						<h3 align="center">DESCARGAS DE AGUA</h3>
+						<div class="col-md-7">
+							<h4>DESCARGAS DE AGUA DE OBSERVANCIA FEDERAL Y LOCAL</h4>
+							<ul>
+								<a class="list-group-item list-group-item-info">Muestreo de agua residual y medición de flujo de 6, 8, 12 o 24 hrs, de acuerdo a la NMX-AA-003-1980.</a>
+								<a class="list-group-item list-group-item-info">Análisis de Agua Residual, de acuerdo a la NOM-001-SEMARNAT-1996.</a>
+								<a class="list-group-item list-group-item-info">Análisis de Agua Residual, de acuerdo a la NOM-002-SEMARNAT-1996.</a>
+								<a class="list-group-item list-group-item-info">NADF-015-AGUA-2009.</a>
+							</ul>
+
+							<h4>AGUA POTABLE</h4>
+							<ul>
+								<a class="list-group-item list-group-item-info">NOM-127-SSA1-1997.</a>
+								<a class="list-group-item list-group-item-info">NOM-201-SSA1-2002.</a>
+							</ul>
+							<br/>
+							<br/>
+							<hr/>
+						</div>
+
+						<div class="col-md-5">
+							<img src="img/agua.jpg" alt="responsive image" width="100%">
+						</div>
+					</div>
+
+					<div class="row">
+						<h3 align="center">EMISIONES CONTAMINANTES A LA ATMÓSFERA</h3>
+
+						<div class="col-md-5">
+							<img src="img/emision.jpg" alt="responsive image" width="100%">
+						</div>
+
+						<div class="col-md-7">
+							<ul>
+								<a class="list-group-item list-group-item-info">NOM-043-SEMARNAT-1993. Determinación de partículas suspendidas totales.</a>
+								<a class="list-group-item list-group-item-info">NOM-085-SEMARNAT-2011.  Determinación de emisión de humo.</a>
+								<a class="list-group-item list-group-item-info">NOM-081-SEMARNAT-1994. Determinación de Ruido Perimetral.</a>
+								<a class="list-group-item list-group-item-info">NADF-005-AMBT-2006. Determinación de ruido ambiental para el D.F</a>
+								<a class="list-group-item list-group-item-info">NOM-035-SEMARNAT-1993. Determinación de la concentración de parículas suspendidas totales.</a>
+							</ul>
+							<br/>
+							<br/>
+							<br/>
+							<br/>
+							<br/>
+							<hr/>
+						</div>
+					</div>
+							
+					<div class="row">
+						<h3 align="center">CONTAMINANTES EN SUELO</h3>
+
+						<div class="col-md-7">
+							<ul>
+								<a class="list-group-item list-group-item-info">Hidrocarburos Totales del Petróleo TPH's</a>
+								<a class="list-group-item list-group-item-info">Compuestos Orgánicos Volátiles y Semivolátiles</a>
+								<a class="list-group-item list-group-item-info">Metales</a>
+								<a class="list-group-item list-group-item-info">Potencial de Hidrógeno</a>
+								<a class="list-group-item list-group-item-info">Humedad</a>
+							</ul>
+							<br/>
+							<br/>
+							<br/>
+							<br/>
+							<br/>
+							<hr/>
+						</div>
+
+						<div class="col-md-5"><img src="img/suelo.jpg" alt="responsive image" width="100%"></div>
+					</div>
+
+				</div>
+				
+				<!-- proteccion -->
+				<div class="tab-pane fade" id="proteccion">
+
+					<div class="row">
+						<h3 align="center">Protección Civil</h3>
+						<br/>
+						<br/>
+						<br/>
+
+						<div class="col-md-7">
+							<ul>
+								<a class="list-group-item list-group-item-info">Programa Específico de Protección Civil para el Estado de México.</a>
+								<a class="list-group-item list-group-item-info">Programa Interno de Protección Civil para el distrito Federal.</a>
+								<a class="list-group-item list-group-item-info">Plan de emergencia y/o contingencia</a>
+								<a class="list-group-item list-group-item-info">Curso básico y/o  especializado en los rubros: combate de incendios, primeros auxilios, evacuación y comunicación.</a>
+								<a class="list-group-item list-group-item-info">Simulacro y formación de brigadas.</a>
+								<a class="list-group-item list-group-item-info">Visto Bueno de Protección Civil.</a>
+								<a class="list-group-item list-group-item-info">Visto Bueno de Seguridad y Operación.</a>
+								<a class="list-group-item list-group-item-info">Constancia de Seguridad Estructural.</a>
+							</ul>
+							<br/>
+							<br/>
+							<br/>
+							<br/>
+							<hr/>
+						</div>
+
+						<div class="col-md-5">
+							<img src="img/proteccion.jpg" alt="responsive image" width="80%">
+						</div>
+
+					</div>
+							
+				</div>
+
+				<!-- seguridad -->
+				<div class="tab-pane fade" id="seguridad">
+					<div class="row">
+						<h3 align="center">Seguridad e Higiene</h3>
+						<br/>
+						<br/>
+						<br/>
+
+						<div class="col-md-7">
+							<h4>Cursos, capacitaciones, desarrollo e implementación de normas oficiales mexicanas expedidas por la STPS</h4>
+							<ul>
+								<a class="list-group-item list-group-item-info">NOM-004-STPS-1999. Estudio de maquinaria y equipo.</a>
+								<a class="list-group-item list-group-item-info">NOM-017-STPS-2008. Determinción de Equipo de Protección Personal.</a>
+								<a class="list-group-item list-group-item-info">NOM-005-STPS-1998. Análisis de Sustancias Químicas.</a>
+								<a class="list-group-item list-group-item-info">NOM-015-STPS-2001. Condiciones térmicas.</a>
+								<a class="list-group-item list-group-item-info">NOM-025-STPS-2008. Determinación de los niveles de iluminación.</a>
+								<a class="list-group-item list-group-item-info">NOM-020-STPS-2002. Recipientes sujetos a presión.</a>
+								<a class="list-group-item list-group-item-info">NOM-019-STPS-2011. Formación de la comisión mixta de seguridad e higiene.</a>
+								<a class="list-group-item list-group-item-info">Formatos de capacitación DC-1, DC-2, DC-3 y DC-4.</a>
+							</ul>
+							<br/>
+							<hr/>
+						</div>
+
+						<div class="col-md-5">
+							<img src="img/helmet.png" alt="responsive image" width="100%">
+						</div>
+					</div>
+							
+				</div>
+
+				<!-- asesoria -->
+				<div class="tab-pane fade" id="asesoria">
+					<div class="row">
+						<h3 align="center">Asesoría Ambiental</h3>
+						<br/>
+						<br/>
+						<br/>
+
+						<div class="col-md-7">
+							<ul>
+								<a class="list-group-item list-group-item-info">Atención a visitas de inspección o garantías de audiencia.</a>
+								<a class="list-group-item list-group-item-info">Respuesta y seguimiento a oficios emitidos por las autoridades como: Secretaría de Ecología, Secretaría del Trabajo o Protección Civil.</a>
+								<br/>
+								<br/>
+								<br/>
+								<br/>
+								<hr/>
+							</ul>
+
+						</div>
+						
+						<div class="col-md-5">
+							<img src="img/capacitacion.jpg" alt="responsive image" width="100%">
+						</div>
+
+					</div>
+
+				</div>
+
+				<!-- contacto -->
+				<div class="tab-pane fade" id="contacto">
+					<h3 align="center">YANICSHOW </h3>
+					<h3 align="center">Tiene alguna duda o comentario sobre nuestros servicios.</h3>
+					<h3 align="center">Contáctanos</h3>
+					<form role="form" id="coments">
+				<div class="form-group">
+						<label for="nombre">Nombre</label>
+						<input type="text" class="form-control" id="nombre"
+							   placeholder="Nombre">
+				</div>
+				<div class="form-group">
+						<label for="email">E-mail</label>
+						<input type="email" class="form-control" id="email" 
+							   placeholder="E-mail">
+				</div>
+				<div class="form-group">
+						<label for="comentarios">Comentarios</label>
+						<textarea class="form-control" rows="3" id="comentarios" placeholder="Comentarios"></textarea>
+						<p class="help-block">Comentarios</p>
+				</div>
+				<button type="submit" class="btn btn-default">Enviar</button>
+					</form>
+				</div>
+
+
+			</div>
+			
+			<script type="text/javascript">
+				
+				
+				
+			</script>
+			
+			
+		</div>
+			<hr>
+			<footer>
+				<p>&copy; 2005 - <?php echo date('Y') ?> Máxima Diversión. <?php echo $this->translate('All rights reserved.') ?></p>
+			</footer>
+	</div> <!-- /container -->
+	
+	<?php echo $this->inlineScript() ?>
+</body>
+</html>

@@ -1,0 +1,68 @@
+body {
+	
+	padding-top: 60px;
+	margin-bottom: 90px;
+	/*background-image: url('../img/bg_img/portada.jpg');*/
+/* 	background-color: #DCE775; */
+	background-attachment: fixed;
+	background-size: cover;
+
+	/* Firefox 3.6 */
+	-moz-background-size: cover;  
+
+	/* Internet Explorer 7/8 */
+	background-position: center;  
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	/* Background image is fixed in the viewport so that it doesn't move 
+	when the content's height is greater than the image's height */
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.container{
+	color: white;
+}
+
+.jumbotron{
+/* 	background-color: rgba(26, 26, 26, 0.85) */
+	background-color: rgba(139, 195, 74, 0.85)
+}
+
+span.label{
+	background-color: #689F38;
+}
+
+.blog-post{
+/* 	background-color: rgba(26, 26, 26, 0.85); */
+	background-color: rgba(255, 183, 77, 0.85);
+}
+
+.short{
+	width: 100%; height: auto;
+}
+
+.medium{
+	width: 200px; height: auto;
+}
+
+.large{
+	width: 100%; height: auto;
+}
+
+.photo-size{
+	width: 100%; height: auto;
+}
+
+.navbar-fixed-bottom{
+	text-align: center;
+}
+
+/*
+ * Galeria
+ */
+
