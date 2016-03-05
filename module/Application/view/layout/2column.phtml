@@ -12,7 +12,7 @@
 	
 	<!-- Le styles -->
 	<?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.yanic.icon', 'href' => $this->basePath() . '/img/yanic.ico'))
-		->prependStylesheet($this->basePath('css/style3.css'))
+		->prependStylesheet($this->basePath('css/2column.css'))
 		->prependStylesheet($this->basePath('css/bootstrap-theme.min.css'))
 		->prependStylesheet($this->basePath('css/dashboard.css'))
 // 		->prependStylesheet($this->basePath('css/social_timeline/dpSocialTimeline.css'))
@@ -101,22 +101,19 @@
 			<div class="col-md-5">
 				<div class="blog-post"><!-- -------------- /.blog-post -------------- -->
 					<div class="col-md-6">
-						<h2 class="">¿Quienes Somos?</h2>
-						<p class="">Mayo 1, 2015 por <a href="#">Abner Showman</a></p>
+<!-- 						<h2 class="">¿Quienes Somos?</h2> -->
+						<div id="home_title_0"></div>
+						<p id="post-datde" class=""></p>
+<!-- 						<p class="">Mayo 1, 2015 por <a href="#">Abner Showman</a></p> -->
 					</div>
 					<div class=" ">
 						<img class="img-thumbnail medium" src="img/profile_image/logo_formal_profile_size.jpg" >
 					</div>
 					<hr>
-					<blockquote>
-							<p>
-							<p>Somos una <strong>Empresa de Publicidad y Espectáculos</strong> con mas de 10 años llevando diversión a chicos y grandes, además de hacer crecer negocios con nuestros servicios de publicidad.</p>
-
-							<p>Ofrecemos servicios <strong>Profesionales de Vanguardia y Calidad</strong>, acércate con los mejores,  porque en <strong>YANICSHOW</strong> lo más importante eres <strong>TU</strong>.</p>
-
-							<p>Grandes clientes nos respaldan.</p>
-						</p>
-					</blockquote>
+					
+					<div id="home_text_0">
+					</div>
+					
 				</div><!-- -------------- /.blog-post -------------- -->
 			</div>
 
@@ -188,6 +185,30 @@
 			<p>&copy; 2005 - <?php echo date('Y') ?> Máxima Diversión. <?php echo $this->translate('All rights reserved.') ?></p>
 		</footer>
 	</div> <!-- /container -->
+	
+	<script type="text/javascript">
+					
+		/**
+		 * Variable para llamado a peticiones jquery 
+		 */
+		var $basePath = "<?php echo $this->basePath();?>";
+		
+// 		$(document).ready(function(){
+			
+// 			$('#socialTimeline').dpSocialTimeline({
+// 				feeds: 
+// 				{
+// 					'facebook_page': {data: '115869311875508'}
+// 				},
+// 				layoutMode: 'columns',
+// 				showLayout: false,
+// 				itemWidth: 200,
+// 				total: 10
+// 			});
+			
+// 		});
+						
+					</script>
 	
 	<?php echo $this->inlineScript() ?>
 </body>
