@@ -35,7 +35,7 @@ class IndexController extends AbstractActionController
     	
     	$view = new ViewModel();
     	
-    	$view->setTemplate('layout/layout2.phtml');
+    	$view->setTemplate('layout/layout1.phtml');
     	
     	return $view;
     	
