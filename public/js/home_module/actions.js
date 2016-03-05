@@ -10,7 +10,8 @@ jQuery.noConflict();
 $(document).ready(function($) {
 
 	getHomeMenu();
-	getHomeContect();
+	console.log('calling getHomeMenu();');
+//	getHomeContect();
     
     /**
      * 	@posts

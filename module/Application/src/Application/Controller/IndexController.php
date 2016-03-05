@@ -32,10 +32,14 @@ class IndexController extends AbstractActionController
 	
     public function indexAction()
     {
+    	
     	$layout = 'layout/blog.phtml';
 //     	$layout = 'layout/2column.phtml';
 //     	$layout = 'layout/mosaic.phtml';
-    	
+		
+		
+		
+		
     	$view = new ViewModel();
     	
 //     	$view->setTemplate($layout);

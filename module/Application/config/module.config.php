@@ -89,7 +89,7 @@ return array(
         'template_map' => array(
 //             'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml', //blank layout
 //             'layout/layout'           => __DIR__ . '/../view/layout/blog.phtml', //blog layout
-            'layout/layout'           => __DIR__ . '/../view/layout/2column.phtml', //2column layout
+//             'layout/layout'           => __DIR__ . '/../view/layout/2column.phtml', //2column layout
             'application/index/index' => __DIR__ . '/../view/application/index/index.phtml',
             'error/404'               => __DIR__ . '/../view/error/404.phtml',
             'error/index'             => __DIR__ . '/../view/error/index.phtml',
