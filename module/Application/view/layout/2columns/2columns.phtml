@@ -12,12 +12,16 @@
 	
 	<!-- Le styles -->
 	<?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.yanic.icon', 'href' => $this->basePath() . '/img/yanic.ico'))
-		->prependStylesheet($this->basePath('css/2columns.css'))
-		->prependStylesheet($this->basePath('css/bootstrap-theme.min.css'))
-		->prependStylesheet($this->basePath('css/dashboard.css'))
+
 // 		->prependStylesheet($this->basePath('css/social_timeline/dpSocialTimeline.css'))
 // 		->prependStylesheet($this->basePath('css/social_timeline/magnific-popup.css'))
 // 		->prependStylesheet($this->basePath('css/social_timeline/styles.css'))
+
+		->prependStylesheet($this->basePath('css/social-buttons/font-awesome.css'))
+		->prependStylesheet($this->basePath('css/social-buttons/bootstrap-social.css'))
+		->prependStylesheet($this->basePath('css/2columns.css'))
+		->prependStylesheet($this->basePath('css/bootstrap-theme.min.css'))
+		->prependStylesheet($this->basePath('css/dashboard.css'))
 		->prependStylesheet($this->basePath('css/bootstrap.min.css')) ?>
 	
 	<!-- Scripts -->
@@ -26,8 +30,6 @@
 // 		->prependFile($this->basePath('js/social_timeline/jquery.dpSocialTimeline.js'))
 // 		->prependFile($this->basePath('js/social_timeline/jquery.isotope.min.js'))
 
-		->prependFile($this->basePath('js/home_module/actions.js'))
-		->prependFile($this->basePath('js/home_module/requests/home.js'))
 		->prependFile($this->basePath('js/bootstrap.min.js'))
 		->prependFile($this->basePath('js/jquery.min.js'))
 		->prependFile($this->basePath('js/jquery-2.1.0.min.js'))
@@ -53,26 +55,11 @@
 
 		<!-- -------------- Collect the nav links, forms, and other content for toggling -------------- -->
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
-			<ul class="nav navbar-nav">
-				<li class="active">
-					<a href="#">INICIO</a>
-				</li>
-				<li>
-					<a data-toggle="modal" href='#infantil'>SHOWS INFANTILES</a>
-				</li>
-				<li>
-					<a data-toggle="modal" href='#imitador'>IMITADORES</a>
-				</li>
-				<li>
-					<a href="#">PUBLICIDAD</a>
-				</li>
-				<li>
-					<a href="#">EVENTOS ESPECIALES</a>
-				</li>
-				<li>
-					<a href="sections/galleria.html">GALERIA</a>
-				</li>
+		
+			<ul id="home_list" class="nav navbar-nav">
 			</ul>
+<!-- 			<ul id="login_list" class="nav navbar-nav"> -->
+<!-- 			</ul> -->
 		</div>
 		<!-- -------------- /.navbar-collapse -------------- -->
 
@@ -121,24 +108,23 @@
 			<div class="col-md-7">
 				<div class="blog-post"><!-- -------------- /.blog-post -------------- -->
 				<br>
-					<div class="col-md-5">
+					<div class="col-md-5" >
 						<img class="img-thumbnail short" src="img/galeria/eventos_especiales/big_26.jpg" >
 						<br>
 						<br>
 						<br>
 						<br>
-						<h2 class="">Contamos con el mejor servicio</h2>
+						
+						<div id="home_title_1"></div>
 					</div>
 					<div class="col-md-7">
 						<img class="img-thumbnail" src="img/galeria/eventos_especiales/big_31.jpg" >
 					</div>
-					<div>
-						<blockquote>
-							<p>
-								<p>Porque sabemos que tu mereces lo mejor estamos empeñados a dar mas del <strong> 200% </strong> en cada una de nuestra presentaciones.</p>
-							</p>
-						</blockquote>
+					
+					<div id="home_text_1">
+						
 					</div>
+					
 				</div><!-- -------------- /.blog-post -------------- -->
 			</div>
 		</div>
@@ -210,7 +196,10 @@
 			
 // 		});
 						
-					</script>
+	</script>
+	
+	<script type="text/javascript" src="<?php echo $this->basePath()?>/js/home_module/actions.js"></script>
+	<script type="text/javascript" src="<?php echo $this->basePath()?>/js/home_module/requests/home.js"></script>
 	
 	<?php echo $this->inlineScript() ?>
 </body>

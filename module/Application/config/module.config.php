@@ -87,7 +87,7 @@ return array(
         'not_found_template'       => 'error/404',
         'exception_template'       => 'error/index',
         'template_map' => array(
-//             'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml', //blank layout
+            'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml', //blank layout
 //             'layout/layout'           => __DIR__ . '/../view/layout/blog.phtml', //blog layout
 //             'layout/layout'           => __DIR__ . '/../view/layout/2column.phtml', //2column layout
             'application/index/index' => __DIR__ . '/../view/application/index/index.phtml',

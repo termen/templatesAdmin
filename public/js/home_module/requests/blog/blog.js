@@ -9,7 +9,6 @@ $.noConflict();
  * 
  */
 function getHomeMenu(){
-//	console.log('getting getHomeMenu()');
 	$.ajax({
 		url  : $basePath + "/application/getmenuhome",
 		type : "POST",
@@ -45,7 +44,7 @@ function getHomeMenu(){
 	
 }
 
-function getHomeContect(){
+function getHomeContent(){
 	
 	$.ajax({
 		url  : $basePath + "/application/getcontenthome",

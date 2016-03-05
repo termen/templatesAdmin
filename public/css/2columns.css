@@ -5,6 +5,7 @@ body {
 	/*background-image: url('../img/bg_img/portada.jpg');*/
 /* 	background-color: #DCE775; */
 /* 	background-color: #4DD0E1; */
+	background-color: #80DEEA;
 	background-attachment: fixed;
 	background-size: cover;
 
@@ -59,9 +60,14 @@ span.label{
 	width: 100%; height: auto;
 }
 
-.navbar-fixed-bottom{
-	text-align: center;
+a.btn-social:hover{
+	color: #000000;
 }
+
+footer>p{
+	color: #000000;
+}
+
 
 /*
  * Galeria

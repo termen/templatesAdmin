@@ -26,8 +26,6 @@
 // 		->prependFile($this->basePath('js/social_timeline/jquery.dpSocialTimeline.js'))
 // 		->prependFile($this->basePath('js/social_timeline/jquery.isotope.min.js'))
 
-		->prependFile($this->basePath('js/home_module/actions.js'))
-		->prependFile($this->basePath('js/home_module/requests/home.js'))
 		->prependFile($this->basePath('js/bootstrap.min.js'))
 		->prependFile($this->basePath('js/jquery.min.js'))
 		->prependFile($this->basePath('js/jquery-2.1.0.min.js'))
@@ -423,9 +421,30 @@
 			
 			<script type="text/javascript">
 				
+				/**
+				 * Variable para llamado a peticiones jquery 
+				 */
+				var $basePath = "<?php echo $this->basePath();?>";
 				
+// 		 		$(document).ready(function(){
+					
+// 		 			$('#socialTimeline').dpSocialTimeline({
+// 		 				feeds: 
+// 		 				{
+// 		 					'facebook_page': {data: '115869311875508'}
+// 		 				},
+// 		 				layoutMode: 'columns',
+// 		 				showLayout: false,
+// 		 				itemWidth: 200,
+// 		 				total: 10
+// 		 			});
+					
+// 		 		});
 				
 			</script>
+	
+			<script type="text/javascript" src="<?php echo $this->basePath()?>/js/home_module/mosaic/mosaic-actions.js"></script>
+			<script type="text/javascript" src="<?php echo $this->basePath()?>/js/home_module/requests/mosaic/mosaic-Home.js"></script>
 			
 			
 		</div>
