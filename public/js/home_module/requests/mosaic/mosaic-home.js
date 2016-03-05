@@ -33,7 +33,7 @@ function getHomeMenu(){
 			$.each(response.data, function(index, obj){
 				
 				if(obj.menu_name == "INICIO"){
-					$home_list.append('<li class="menu active" ><a href="' + obj.ruta + '">' 
+					$home_list.append('<li class="active" ><a href="' + obj.ruta + '" data-toggle="tab" id="color">' 
 							+ obj.menu_name + '</a></li>');
 				}
 				else if(obj.menu_name == "INICIA SESION"){
@@ -41,7 +41,7 @@ function getHomeMenu(){
 							+ obj.menu_name + '</a></li>');
 				}
 				else{
-					$home_list.append('<li class="menu" ><a href="' + obj.ruta + '">' 
+					$home_list.append('<li class="menu" ><a href="' + obj.ruta + '" data-toggle="tab" id="color">' 
 							+ obj.menu_name + '</a></li>');
 				}
 				

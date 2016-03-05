@@ -12,12 +12,16 @@
 	
 	<!-- Le styles -->
 	<?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.yanic.icon', 'href' => $this->basePath() . '/img/yanic.ico'))
-		->prependStylesheet($this->basePath('css/mosaic.css'))
-		->prependStylesheet($this->basePath('css/bootstrap-theme.min.css'))
-		->prependStylesheet($this->basePath('css/dashboard.css'))
+		
 // 		->prependStylesheet($this->basePath('css/social_timeline/dpSocialTimeline.css'))
 // 		->prependStylesheet($this->basePath('css/social_timeline/magnific-popup.css'))
 // 		->prependStylesheet($this->basePath('css/social_timeline/styles.css'))
+	
+		->prependStylesheet($this->basePath('css/social-buttons/font-awesome.css'))
+		->prependStylesheet($this->basePath('css/social-buttons/bootstrap-social.css'))
+		->prependStylesheet($this->basePath('css/mosaic.css'))
+		->prependStylesheet($this->basePath('css/bootstrap-theme.min.css'))
+		->prependStylesheet($this->basePath('css/dashboard.css'))
 		->prependStylesheet($this->basePath('css/bootstrap.min.css')) ?>
 	
 	<!-- Scripts -->
@@ -76,23 +80,22 @@
 		<div class="row">
 			<?php echo $this->content; ?>
 			<div class="col-md-2"  id="sidebar">
+				<ul class="nav nav-tabs nav-stacked" id="home_list">
+<!-- 					<li class="dropdown"> -->
+<!-- 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" id="color">Servicios<b class="caret"></b></a> -->
+<!-- 						<ul class="dropdown-menu" id="lista"> -->
+<!-- 							<li><a href="#tramites" data-toggle="tab" id="color">Trámites-Gestión</a></li> -->
+<!-- 							<li><a href="#estudios" data-toggle="tab" id="color">Estudios y Análisis de Laboratorio</a></li> -->
+<!-- 							<li><a href="#proteccion" data-toggle="tab" id="color">Proteccion Civil</a></li> -->
+<!-- 							<li><a href="#seguridad" data-toggle="tab" id="color">Seguridad e Higiene</a></li> -->
+<!-- 							<li><a href="#asesoria" data-toggle="tab" id="color">Asesoria Ambiental</a></li> -->
+<!-- 							<li class="divider"></li> -->
+<!-- 							<li><a class="disabled">Otros servicios</a></li> -->
+<!-- 							<li><a href="#" id="color">OTROS</a></li> -->
+<!-- 						</ul> -->
+<!-- 					</li> -->
+				</ul>
 				<ul class="nav nav-tabs nav-stacked" id=" ">
-					<li class="active"><a href="#inicio" data-toggle="tab" id="color">Inicio</a></li>
-					<li><a href="#empresa" data-toggle="tab" id="color">Empresa</a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" id="color">Servicios<b class="caret"></b></a>
-						<ul class="dropdown-menu" id="lista">
-					<li><a href="#tramites" data-toggle="tab" id="color">Trámites-Gestión</a></li>
-					<li><a href="#estudios" data-toggle="tab" id="color">Estudios y Análisis de Laboratorio</a></li>
-					<li><a href="#proteccion" data-toggle="tab" id="color">Proteccion Civil</a></li>
-					<li><a href="#seguridad" data-toggle="tab" id="color">Seguridad e Higiene</a></li>
-					<li><a href="#asesoria" data-toggle="tab" id="color">Asesoria Ambiental</a></li>
-					<li class="divider"></li>
-					<li><a class="disabled">Otros servicios</a></li>
-					<li><a href="#" id="color">OTROS</a></li>
-						</ul>
-					</li>
-				 	<li><a href="#contacto" data-toggle="tab" id="color">Contacto</a></li>
 					<h4>Visitanos en</h4>
 					<li><a class="btn btn-block btn-social btn-lg btn-twitter" ><i class="fa fa-twitter"></i>Twitter</a></li>
 					<li><a class="btn btn-block btn-social btn-lg btn-facebook" href="https://www.facebook.com/PPCConsultores?fref=ts"><i class="fa fa-facebook"></i>Facebook</a></li>
@@ -444,7 +447,7 @@
 			</script>
 	
 			<script type="text/javascript" src="<?php echo $this->basePath()?>/js/home_module/mosaic/mosaic-actions.js"></script>
-			<script type="text/javascript" src="<?php echo $this->basePath()?>/js/home_module/requests/mosaic/mosaic-Home.js"></script>
+			<script type="text/javascript" src="<?php echo $this->basePath()?>/js/home_module/requests/mosaic/mosaic-home.js"></script>
 			
 			
 		</div>
